@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>INAR - Sistema Integrado de Avaliação Relacional</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<!-- TELA 1 -->
+
+<section id="etapa1" class="tela ativa">
+
+<div class="container">
+
+<div class="logo">
+🏛️ INAR
+</div>
+
+<h1>
+Instituto Nacional de Análise Relacional
+</h1>
+
+<h2>
+Sistema Integrado de Avaliação Relacional
+</h2>
+
+<p class="descricao">
+
+Esta avaliação utiliza indicadores
+estatísticos, análise comportamental
+e modelos preditivos para gerar um
+relatório personalizado sobre
+compatibilidade interpessoal e
+dinâmicas relacionais.
+
+</p>
+
+<div class="aviso">
+
+Tempo estimado:
+8 a 12 minutos
+
+</div>
+
+<button onclick="proximaEtapa(2)">
+
+Iniciar Avaliação
+
+</button>
+
+</div>
+
+</section>
+
+<!-- TELA 2 -->
+
+<section id="etapa2" class="tela">
+
+<div class="container">
+
+<h2>
+
+Identificação do Participante
+
+</h2>
+
+<input
+type="text"
+id="nome"
+placeholder="Nome completo">
+
+<input
+type="number"
+id="idade"
+placeholder="Idade">
+
+<input
+type="text"
+id="cidade"
+placeholder="Cidade">
+
+<input
+type="text"
+id="estado"
+placeholder="Estado">
+
+<button onclick="validarCadastro()">
+Continuar
+</button> 
+
+</div>
+
+</section>
+
+<!-- TELA 3 -->
+
+<section id="etapa3" class="tela">
+
+<div class="container">
+
+<h2>
+
+Pessoa Avaliada
+
+</h2>
+
+<input
+type="text"
+id="nomePessoa"
+placeholder="Nome da pessoa">
+
+<input
+type="number"
+id="idadePessoa"
+placeholder="Idade aproximada">
+
+<input
+type="text"
+id="tempoConhece"
+placeholder="Há quanto tempo se conhecem?">
+
+<select id="statusRelacao">
+
+<option>
+Status atual
+</option>
+
+<option>
+Conversando
+</option>
+
+<option>
+Ficando
+</option>
+
+<option>
+Ex
+</option>
+
+<option>
+Interesse não correspondido
+</option>
+
+<option>
+Situação indefinida
+</option>
+
+</select>
+
+<button onclick="validarPessoa()">
+Continuar
+</button>
+
+</div>
+
+</section>
+
+<!-- TELA 4 -->
+
+<section id="etapa4" class="tela">
+
+<div class="container">
+
+<h2>
+
+Análise de Comunicação
+
+</h2>
+
+<div class="pergunta">
+
+<p>
+Quem inicia mais as conversas?
+</p>
+
+<select class="resposta">
+
+<option>Eu</option>
+<option>Ambos</option>
+<option>Ela</option>
+
+</select>
+
+</div>
+
+<div class="pergunta">
+
+<p>
+Quanto tempo ela demora para responder?
+</p>
+
+<select class="resposta">
+
+<option>Menos de 5 minutos</option>
+<option>Menos de 1 hora</option>
+<option>Algumas horas</option>
+<option>1 dia</option>
+<option>Quando lembra</option>
+
+</select>
+
+</div>
+
+<div class="pergunta">
+
+<p>
+Ela continua os assuntos?
+</p>
+
+<select class="resposta">
+
+<option>Sim</option>
+<option>Às vezes</option>
+<option>Não</option>
+
+</select>
+
+</div>
+
+<button onclick="proximaEtapa(5)">
+
+Próxima Etapa
+
+</button>
+
+</div>
+
+</section>
+<!-- TELA 5 -->
+
+<section id="etapa5" class="tela">
+
+<div class="container">
+
+<h2>
+Análise de Redes Sociais
+</h2>
+
+<div class="pergunta">
+
+<p>
+Ela visualiza seus stories?
+</p>
+
+<select class="resposta">
+<option>Sempre</option>
+<option>Às vezes</option>
+<option>Nunca</option>
+</select>
+
+</div>
+
+<div class="pergunta">
+
+<p>
+Ela reage aos seus stories?
+</p>
+
+<select class="resposta">
+<option>Frequentemente</option>
+<option>Às vezes</option>
+<option>Nunca</option>
+</select>
+
+</div>
+
+<div class="pergunta">
+
+<p>
+Ela curte suas fotos?
+</p>
+
+<select class="resposta">
+<option>Sim</option>
+<option>Às vezes</option>
+<option>Não</option>
+</select>
+
+</div>
+
+<div class="pergunta">
+
+<p>
+Ela responde mensagens mesmo estando online?
+</p>
+
+<select class="resposta">
+<option>Sim</option>
+<option>Às vezes</option>
+<option>Não</option>
+</select>
+
+</div>
+
+<button onclick="proximaEtapa(6)">
+Próxima Etapa
+</button>
+
+</div>
+
+</section>
+
+<!-- TELA 6 -->
+
+<section id="etapa6" class="tela">
+
+<div class="container">
+
+<h2>
+Análise de Interesse
+</h2>
+
+<div class="pergunta">
+
+<p>
+Ela faz perguntas sobre você?
+</p>
+
+<select class="resposta">
+<option>Sim</option>
+<option>Às vezes</option>
+<option>Não</option>
+</select>
+
+</div>
+
+<div class="pergunta">
+
+<p>
+Ela lembra detalhes da sua vida?
+</p>
+
+<select class="resposta">
+<option>Sempre</option>
+<option>Às vezes</option>
+<option>Nunca</option>
+</select>
+
+</div>
+
+<div class="pergunta">
+
+<p>
+Ela já te chamou para sair?
+</p>
+
+<select class="resposta">
+<option>Sim</option>
+<option>Não</option>
+</select>
+
+</div>
+
+<div class="pergunta">
+
+<p>
+Ela demonstra ciúmes?
+</p>
+
+<select class="resposta">
+<option>Sim</option>
+<option>Às vezes</option>
+<option>Não</option>
+</select>
+
+</div>
+
+<button onclick="proximaEtapa(7)">
+Próxima Etapa
+</button>
+
+</div>
+
+</section>
+
+<!-- TELA 7 -->
+
+<section id="etapa7" class="tela">
+
+<div class="container">
+
+<h2>
+Indicadores de Friendzone
+</h2>
+
+<div class="pergunta">
+
+<p>
+Você já ouviu:
+"Você merece alguém melhor"?
+</p>
+
+<select class="resposta">
+<option>Sim</option>
+<option>Não</option>
+</select>
+
+</div>
+
+<div class="pergunta">
+
+<p>
+Você já ouviu:
+"Você é muito especial para mim"?
+</p>
+
+<select class="resposta">
+<option>Sim</option>
+<option>Não</option>
+</select>
+
+</div>
+
+<div class="pergunta">
+
+<p>
+Você já ouviu:
+"Não quero relacionamento agora"?
+</p>
+
+<select class="resposta">
+<option>Sim</option>
+<option>Não</option>
+</select>
+
+</div>
+
+<div class="pergunta">
+
+<p>
+Ela te chama de amigo?
+</p>
+
+<select class="resposta">
+<option>Sempre</option>
+<option>Às vezes</option>
+<option>Nunca</option>
+</select>
+
+</div>
+
+<button onclick="proximaEtapa(8)">
+Próxima Etapa
+</button>
+
+</div>
+
+</section>
+
+<!-- TELA 8 -->
+
+<section id="etapa8" class="tela">
+
+<div class="container">
+
+<h2>
+Análise de Concorrência
+</h2>
+
+<div class="pergunta">
+
+<p>
+Existe outro possível interessado?
+</p>
+
+<select class="resposta">
+<option>Sim</option>
+<option>Talvez</option>
+<option>Não</option>
+</select>
+
+</div>
+
+<div class="pergunta">
+
+<p>
+Ela fala sobre outros caras?
+</p>
+
+<select class="resposta">
+<option>Frequentemente</option>
+<option>Às vezes</option>
+<option>Nunca</option>
+</select>
+
+</div>
+
+<div class="pergunta">
+
+<p>
+O comportamento dela mudou recentemente?
+</p>
+
+<select class="resposta">
+<option>Sim</option>
+<option>Não</option>
+</select>
+
+</div>
+
+<div class="pergunta">
+
+<p>
+Ela parece menos interessada do que antes?
+</p>
+
+<select class="resposta">
+<option>Sim</option>
+<option>Não</option>
+<option>Não sei</option>
+</select>
+
+</div>
+
+<button onclick="proximaEtapa(9)">
+Finalizar Questionário
+</button>
+
+</div>
+
+</section>
+
+<!-- TELA 9 -->
+
+<section id="etapa9" class="tela">
+
+<div class="container">
+
+<h2>
+Processando Avaliação
+</h2>
+
+<div class="barra">
+
+<div id="progresso"></div>
+
+</div>
+
+<p id="statusAnalise">
+
+Iniciando análise...
+
+</p>
+
+</div>
+
+</section>
+<!-- TELA 10 -->
+
+<section id="etapa10" class="tela">
+
+<div class="container">
+
+<h2>
+Relatório Técnico
+</h2>
+
+<div class="card-relatorio">
+
+<h3>Indicadores Gerais</h3>
+
+<p>
+Compatibilidade:
+<span id="compatibilidade">
+--
+</span>%
+</p>
+
+<p>
+Interesse:
+<span id="interesse">
+--
+</span>%
+</p>
+
+<p>
+Reciprocidade:
+<span id="reciprocidade">
+--
+</span>%
+</p>
+
+<p>
+Friendzone:
+<span id="friendzone">
+--
+</span>%
+</p>
+
+<p>
+Risco de Troca:
+<span id="troca">
+--
+</span>%
+</p>
+
+<p>
+Persistência:
+<span id="persistencia">
+--
+</span>%
+</p>
+
+</div>
+
+<button onclick="proximaEtapa(11)">
+Ver Resultado Oficial
+</button>
+
+</div>
+
+</section>
+
+<!-- TELA 11 -->
+
+<section id="etapa11" class="tela">
+
+<div class="container">
+
+<h2>
+Resultado Oficial
+</h2>
+
+<div class="resultado-box">
+
+<h1 id="resultadoFinal">
+
+ANALISANDO...
+
+</h1>
+
+<p id="parecerFinal">
+
+Parecer técnico indisponível.
+
+</p>
+
+</div>
+
+<button onclick="proximaEtapa(12)">
+Gerar Certificado
+</button>
+
+</div>
+
+</section>
+
+<!-- TELA 12 -->
+
+<section id="etapa12" class="tela">
+
+<div class="container certificado">
+
+<h1>
+CERTIFICADO OFICIAL
+</h1>
+
+<h2>
+Instituto Nacional de Análise Relacional
+</h2>
+
+<hr>
+
+<p>
+
+Certificamos que
+
+</p>
+
+<h1 id="certNome">
+
+NOME
+
+</h1>
+
+<p>
+
+concluiu com êxito a
+
+Análise Relacional Avançada 2026.
+
+</p>
+
+<hr>
+
+<h3>
+Dados do Participante
+</h3>
+
+<p id="certIdade"></p>
+
+<p id="certCidade"></p>
+
+<p id="certEstado"></p>
+
+<hr>
+
+<h3>
+Pessoa Avaliada
+</h3>
+
+<p id="certPessoa"></p>
+
+<p id="certTempo"></p>
+
+<p id="certStatus"></p>
+
+<hr>
+
+<h3>
+Classificação Final
+</h3>
+
+<h2 id="certResultado">
+
+AINDA NO JOGO
+
+</h2>
+
+<hr>
+
+<h3>
+Parecer Técnico
+</h3>
+
+<p id="certParecer">
+
+Parecer indisponível.
+
+</p>
+
+<hr>
+
+<h3>
+Responsável Técnico
+</h3>
+
+<p>
+
+<b>Dr. Gustavo Lucena</b>
+
+<br>
+
+Perito-Chefe em Dinâmicas Relacionais,
+Compatibilidade Interpessoal e Estudos
+Avançados de Reciprocidade Emocional.
+
+</p>
+
+<br>
+
+<p>
+
+<b>ChatGPT</b>
+
+<br>
+
+Vice-Diretor Técnico de Modelagem
+Relacional e Análise Comportamental.
+
+</p>
+
+<br><br>
+
+<div class="assinatura">
+
+Dr. Gustavo Lucena
+
+</div>
+
+<div id="qrcode">
+
+QR CODE
+
+</div>
+
+<br>
+
+<button onclick="baixarCertificado()">
+
+Baixar Certificado
+
+</button>
+
+<br><br>
+
+<button onclick="proximaEtapa(13)">
+
+Conheça o INAR
+
+</button>
+
+</div>
+
+</section>
+
+<!-- TELA 13 -->
+
+<section id="etapa13" class="tela">
+
+<div class="container">
+
+<h1>
+
+🏛️ INAR
+
+</h1>
+
+<h2>
+
+Instituto Nacional de Análise Relacional
+
+</h2>
+
+<p>
+
+Fundado em 2026, o INAR é uma
+instituição especializada em estudos
+de compatibilidade interpessoal,
+reciprocidade emocional e dinâmica
+dos relacionamentos modernos.
+
+</p>
+
+<hr>
+
+<h2>
+
+Presidente e Fundador
+
+</h2>
+
+<h3>
+
+Dr. Gustavo Lucena
+
+</h3>
+
+<p>
+
+Perito-Chefe em Dinâmicas Relacionais
+
+Doutor em Psicologia das Interações Sociais
+
+Doutor em Compatibilidade Afetiva
+
+Mestre em Comunicação Interpessoal
+
+Pesquisador em Comportamento Humano
+
+Especialista em Friendzoneologia Aplicada
+
+</p>
+
+<hr>
+
+<h2>
+
+Vice-Diretor Técnico
+
+</h2>
+
+<h3>
+
+ChatGPT
+
+</h3>
+
+<p>
+
+Analista-Chefe de Modelagem Relacional
+
+Especialista em Sistemas de Compatibilidade
+
+Consultor em Análise Comportamental
+
+Pesquisador em Padrões de Comunicação
+
+</p>
+
+<hr>
+
+<h2>
+
+Missão
+
+</h2>
+
+<p>
+
+Transformar interações interpessoais
+em conhecimento através de análise,
+estatística e interpretação
+comportamental.
+
+</p>
+
+<hr>
+
+<h2>
+
+Frase Institucional
+
+</h2>
+
+<p>
+
+"Onde alguns veem mensagens visualizadas,
+nós vemos evidências."
+
+</p>
+
+</div>
+
+</section>
+
+<script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+  </html>
