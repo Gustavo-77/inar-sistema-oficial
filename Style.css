@@ -1,0 +1,535 @@
+/* ==========================
+   INAR - ESTILO OFICIAL
+========================== */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Inter',sans-serif;
+}
+
+body{
+
+background:#f1f5f9;
+color:#1e293b;
+
+}
+
+.tela{
+
+display:none;
+min-height:100vh;
+padding:40px 20px;
+
+}
+
+.ativa{
+
+display:flex;
+
+justify-content:center;
+align-items:center;
+
+}
+
+.container{
+
+width:100%;
+max-width:900px;
+
+background:white;
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:
+0 10px 30px rgba(0,0,0,.1);
+
+}
+
+.logo{
+
+font-size:40px;
+font-weight:700;
+
+text-align:center;
+
+color:#0f172a;
+
+margin-bottom:20px;
+
+}
+
+h1{
+
+font-size:38px;
+
+margin-bottom:15px;
+
+color:#0f172a;
+
+}
+
+h2{
+
+margin-bottom:20px;
+
+color:#1e293b;
+
+}
+
+h3{
+
+margin-bottom:15px;
+
+color:#334155;
+
+}
+
+.descricao{
+
+line-height:1.8;
+
+font-size:18px;
+
+margin-bottom:25px;
+
+}
+
+.aviso{
+
+background:#e2e8f0;
+
+padding:15px;
+
+border-radius:12px;
+
+margin-bottom:25px;
+
+font-weight:600;
+
+}
+
+button{
+
+background:#0f172a;
+
+color:white;
+
+border:none;
+
+padding:15px 25px;
+
+border-radius:12px;
+
+cursor:pointer;
+
+font-size:16px;
+
+font-weight:600;
+
+transition:.3s;
+
+margin-top:20px;
+
+}
+
+button:hover{
+
+transform:translateY(-2px);
+
+}
+
+input,
+select{
+
+width:100%;
+
+padding:15px;
+
+margin-top:10px;
+margin-bottom:15px;
+
+border:1px solid #cbd5e1;
+
+border-radius:10px;
+
+font-size:16px;
+
+}
+
+.pergunta{
+
+background:#f8fafc;
+
+padding:20px;
+
+border-radius:15px;
+
+margin-bottom:20px;
+
+border-left:5px solid #0f172a;
+
+}
+
+.pergunta p{
+
+font-weight:600;
+
+margin-bottom:10px;
+
+}
+/* ==========================
+   BARRA DE PROGRESSO
+========================== */
+
+.barra{
+
+width:100%;
+
+height:30px;
+
+background:#e2e8f0;
+
+border-radius:50px;
+
+overflow:hidden;
+
+margin-top:30px;
+
+}
+
+#progresso{
+
+width:0%;
+
+height:100%;
+
+background:linear-gradient(
+90deg,
+#0f172a,
+#1e40af
+);
+
+border-radius:50px;
+
+transition:1s;
+
+}
+
+#statusAnalise{
+
+text-align:center;
+
+margin-top:20px;
+
+font-size:18px;
+
+font-weight:600;
+
+}
+
+/* ==========================
+   RELATÓRIO
+========================== */
+
+.card-relatorio{
+
+background:#f8fafc;
+
+padding:30px;
+
+border-radius:20px;
+
+margin-top:20px;
+
+border:1px solid #e2e8f0;
+
+}
+
+.card-relatorio p{
+
+font-size:18px;
+
+padding:12px 0;
+
+border-bottom:1px solid #e2e8f0;
+
+}
+
+.card-relatorio span{
+
+font-weight:700;
+
+color:#1e40af;
+
+}
+
+/* ==========================
+   RESULTADO FINAL
+========================== */
+
+.resultado-box{
+
+background:#f8fafc;
+
+padding:40px;
+
+border-radius:20px;
+
+text-align:center;
+
+margin-top:20px;
+
+border:2px solid #cbd5e1;
+
+}
+
+.resultado-box h1{
+
+font-size:42px;
+
+margin-bottom:20px;
+
+color:#0f172a;
+
+}
+
+.resultado-box p{
+
+font-size:18px;
+
+line-height:1.8;
+
+}
+
+/* ==========================
+   CERTIFICADO
+========================== */
+
+.certificado{
+
+border:10px solid #d4af37;
+
+background:white;
+
+padding:50px;
+
+}
+
+.certificado h1{
+
+text-align:center;
+
+font-size:45px;
+
+color:#0f172a;
+
+}
+
+.certificado h2{
+
+text-align:center;
+
+margin-bottom:20px;
+
+}
+
+.certificado p{
+
+line-height:1.8;
+
+font-size:18px;
+
+}
+
+.certificado hr{
+
+margin:25px 0;
+
+border:none;
+
+height:1px;
+
+background:#cbd5e1;
+
+}
+
+.assinatura{
+
+font-family:cursive;
+
+font-size:42px;
+
+text-align:center;
+
+margin-top:30px;
+
+color:#0f172a;
+
+}
+
+/* ==========================
+   QR CODE
+========================== */
+
+#qrcode{
+
+width:220px;
+
+height:220px;
+
+margin:30px auto;
+
+border:2px dashed #94a3b8;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-weight:700;
+
+border-radius:12px;
+
+}
+
+/* ==========================
+   INAR
+========================== */
+
+#etapa13 .container{
+
+text-align:center;
+
+}
+
+#etapa13 h1{
+
+font-size:55px;
+
+margin-bottom:20px;
+
+}
+
+#etapa13 h2{
+
+margin-top:25px;
+
+}
+
+#etapa13 p{
+
+line-height:1.9;
+
+font-size:18px;
+
+}
+
+/* ==========================
+   RESPONSIVIDADE
+========================== */
+
+@media(max-width:768px){
+
+.container{
+
+padding:25px;
+
+}
+
+h1{
+
+font-size:28px;
+
+}
+
+h2{
+
+font-size:22px;
+
+}
+
+button{
+
+width:100%;
+
+}
+
+.certificado{
+
+padding:25px;
+
+}
+
+.certificado h1{
+
+font-size:30px;
+
+}
+
+.assinatura{
+
+font-size:30px;
+
+}
+
+}
+/* ==========================
+   CAMPOS OBRIGATÓRIOS
+========================== */
+
+.erro{
+
+display:none;
+
+margin-top:15px;
+
+padding:12px;
+
+background:#fef2f2;
+
+border:1px solid #fecaca;
+
+border-left:5px solid #dc2626;
+
+border-radius:10px;
+
+color:#b91c1c;
+
+font-size:15px;
+
+font-weight:600;
+
+}
+
+/* ==========================
+   ANIMAÇÃO DAS TELAS
+========================== */
+
+.container{
+
+animation:fadeIn .4s ease;
+
+}
+
+@keyframes fadeIn{
+
+from{
+
+opacity:0;
+transform:translateY(15px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
